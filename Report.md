@@ -14,7 +14,7 @@ Here are the hyper parameters used for training.
 
 At each step of the environment `(state, action, reward, next_state, done)` tuples are computed for both agents and added to the replay buffer.
 
-# Plot of Rewards (each point is a mean over all 20 agents)
+# Plot of Rewards (each point is the max of the two agents)
 ![](scores.png)
 
 # Ideas for Future Work
