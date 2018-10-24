@@ -1,7 +1,6 @@
 import numpy as np
 import torch
 
-
 # from https://github.com/songrotek/DDPG/blob/master/ou_noise.py
 class OUNoise:
 

@@ -21,7 +21,7 @@ WEIGHT_DECAY = 0        # L2 weight decay
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-class Agent():
+class MADDPG():
     """Interacts with and learns from the environment."""
     
     def __init__(self, state_size, action_size, random_seed):
@@ -62,7 +62,7 @@ class Agent():
         r = np.max(rewards)
         ns = next_states
         d = np.any(dones)
-        self.memory.add(s, a, r, ns, d)
+        self.memory.add(states, actions, rewards, next_states, dones)
 
         # Learn, if enough samples are available in memory
         if len(self.memory) > BATCH_SIZE:
